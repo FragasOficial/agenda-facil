@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js" defer></script>
+    <title>Agenda Fácil</title>
+</head>
+<body>
+    <header>
+        <img src="" alt="">
+    </header>
+    <h1>Agendamento de Consultas</h1>
+    <form action="/agendar" method="post">
+        <label for="nome">Nome completo:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="rgcpf">RG/CPF (Apenas um dos documentos):</label><br>
+        <input type="text" id="rgcpf" name="rgcpf" required><br><br>            
+
+        <label for="sus">Cartão do SUS:</label><br>
+        <input type="text" id="sus" name="sus" required><br><br>
+
+        <label for="telefone">Telefone:</label><br>
+        <input type="tel" id="telefone" name="telefone" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="data">Data da consulta:</label><br>
+        <input type="date" id="data" name="data" required><br><br>
+
+        <label for="especialidade">Especialidade:</label><br>
+        <select id="especialidade" name="especialidade" required>
+            <option value="pediatria">Pediatria</option>
+            <option value="psiquiatria">Psiquiatria</option>
+            <option value="psicologia">Psicologia</option>
+        </select><br><br>
+
+        <input type="submit" value="Agendar Consulta">
+    </form>
+</body>
+</html>
