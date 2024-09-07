@@ -1,19 +1,19 @@
 @import url(./reset.css);
+
 /* Estilos gerais */
 
 body {
     margin: 0 auto;
     font-family: Arial, sans-serif;
-    /* background-color: #f4f4f4; */
-    background-color: yellow;
-    padding: 1.25rem;
+    background-color: #f4f4f4;
+    padding-top: 1.25rem;
 }
 
-header{
+header {
     margin: 0 auto;
-    width: 60%;
+    width: 90%;
+    max-width: 1200px; /* Definindo um max-width para evitar que o header fique muito largo em telas grandes */
     line-height: 1.8rem;
-    /* align-items: center; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -21,20 +21,20 @@ header{
     margin-bottom: 2.5rem;
 }
 
-.renderImg{
+.renderImg {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.desc-title{
+.desc-title {
     text-transform: uppercase;
     font-size: 1.3rem;
     margin-top: 1rem;
     text-align: center;
 }
 
-.second-descTitle{
+.second-descTitle {
     font-size: 1.23rem;
     text-transform: uppercase;
     color: green;
@@ -42,21 +42,13 @@ header{
     text-align: center;
 }
 
-.img-header-logo{
-    width: 12rem;
-    height: 10rem;
+.img-header-logo,
+.img-header,
+.img-header-secSaude {
+    width: 100%;
+    max-width: 12.5rem; /* Definindo um max-width para que as imagens não sejam muito grandes */
+    height: auto; /* Ajustando a altura automaticamente para manter a proporção das imagens */
 }
-
-.img-header{
-    width: 16rem;
-    height: 10rem;
-}
-
-.img-header-secSaude{
-    width: 12rem;
-    height: 10rem;
-}
-
 
 h1, h2 {
     text-align: center;
@@ -64,22 +56,33 @@ h1, h2 {
     color: #333;
 }
 
+h2 {
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+}
+
 form {
-    max-width: 500px;
+    max-width: 90%;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(31, 4, 4, 0.1);
 }
 
 label {
-    font-size: 16px;
+    font-size: 1.25rem;
     color: #333;
 }
 
+#especialidade {
+    font-size: 1.2rem;
+    height: auto;
+    width: 100%; /* Ajuste para que o campo de especialidade ocupe a largura total */
+}
+
 input[type="text"], input[type="tel"], input[type="email"], input[type="date"], input[type="time"] {
-    width: 100%;
+    width: 100%; /* Ajuste para que os campos de entrada ocupem a largura total */
     padding: 10px;
     margin: 10px 0 20px;
     border: 1px solid #ccc;
@@ -101,9 +104,84 @@ input[type="submit"]:hover {
     background-color: #218838;
 }
 
+footer {
+    background-color: #218838;
+    color: white;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: auto; /* Ajuste a altura para que se adapte ao conteúdo */
+    padding: 20px; /* Adicionando algum padding */
+    width: 100%;
+}
+
 /* Ajustes para dispositivos móveis */
 @media (max-width: 600px) {
+    header {
+        align-items: center;
+        width: 95%;
+    }
+
+    .img-header-logo,
+    .img-header-secSaude {
+   display: none;
+    }
+
+    .img-header{
+        justify-content: center;
+        width: 100%;
+        max-width: 30rem; /* Definindo um max-width para que as imagens não sejam muito grandes */
+        height: auto; /* Ajustando a altura automaticamente para manter a proporção das imagens */
+    }
+
+    .desc-title {
+        font-size: 0.8rem;
+    }
+
+    .second-descTitle {
+        font-size: 0.75rem;
+    }
+
+    h1, h2{
+        font-size: 1.2rem;
+    }
+
+    h1{
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
     form {
+        font-size: 1.2rem;
         padding: 15px;
+    }
+
+    input[type="submit"] {
+        font-size: 14px;
+    }
+}
+
+/* Ajustes para tablets */
+@media (max-width: 768px) {
+    .desc-title {
+        font-size: 1.2rem;
+    }
+
+    .second-descTitle {
+        font-size: 1.15rem;
+    }
+
+    form {
+        padding: 18px;
+    }
+}
+
+/* Ajustes para telas grandes */
+@media (min-width: 1200px) {
+    header {
+        width: 80%;
     }
 }
