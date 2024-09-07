@@ -9,10 +9,22 @@
 </head>
 <body>
     <header>
-        <img src="./img/servicos-saude.png" alt="atendimento-digital" class="img-header">
-        <img src="./img/logo_prefeitura_de_frecheirinha.png" alt="prefeitura-municipal-frecheirinha" class="img-header">
+        <div class="renderImg">
+            <img src="./img/logo_prefeitura_de_frecheirinha.png" alt="prefeitura-municipal-frecheirinha" class="img-header-logo">
+            <img src="./img/servicos-saude.png" alt="atendimento-digital" class="img-header">
+            <img src="./img/sec-saude.png" alt="Secretaria-de-saude" class="img-header-secSaude">
+        </div>
+        <p class="desc-title">
+            Seja bem vindo ao agendamento online dos serviços de saúde da Secretaria Municipal de Saúde de Frecheirinha! 
+        </p>
+        <p class="second-descTitle">
+        Agendamento simples, rápido e fácil. 
+        </p> 
     </header>
+   
     <h1>Agendamento de Consultas</h1>
+    <h2>(Preencha os dados muita atenção!)</h2>
+
     <form action="/agendar" method="post">
         <label for="nome">Nome completo:</label><br>
         <input type="text" id="nome" name="nome" required><br><br>
