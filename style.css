@@ -1,9 +1,19 @@
 @import url(./reset.css);
 /* Estilos gerais */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     padding: 20px;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+.img-header{
+    width: 10rem;
 }
 
 h1 {
